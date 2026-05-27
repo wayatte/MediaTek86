@@ -96,27 +96,7 @@ MediaTek86/
 [Vue] <-- affiche <-- [Contrôleur] <-- retourne <-- [DAL] <-- résultat <-- [MySQL]
 ```
 
----
 
-## Étapes de construction – Historique des commits
-
-```
-git log --oneline (résumé)
-
-1. init: création du projet Visual Studio et structure des packages (modele, dal, controlleur, vue, bddmanager)
-2. feat(bdd): ajout du singleton BddManager pour la connexion MySQL
-3. feat(auth): ajout du formulaire de connexion avec hachage SHA-256
-4. feat(personnel-modele): ajout de la classe Personnel.cs
-5. feat(personnel-dal): ajout de AccesPersonnel.cs avec requêtes SQL SELECT, INSERT, UPDATE, DELETE
-6. feat(personnel-controlleur): ajout de PersonnelController.cs
-7. feat(personnel-vue): ajout de FrmPersonnel avec liste et boutons CRUD
-8. feat(absence-modele): ajout des classes Absence.cs et Motif.cs
-9. feat(absence-dal): ajout de AccesAbsence.cs avec vérification anti-chevauchement SQL
-10. feat(absence-controlleur): ajout de AbsenceController.cs avec contrôles de dates
-11. feat(absence-vue): ajout de FrmAbsence avec CRUD complet
-12. fix: correction affichage liste absences après modification
-13. docs: ajout du README et du script SQL
-```
 
 ---
 
