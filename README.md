@@ -120,48 +120,6 @@ git log --oneline (résumé)
 
 ---
 
-## Procédure d'installation
-
-### Prérequis
-
-- Windows 10 ou 11
-- [WampServer](https://www.wampserver.com/) installé et démarré (Apache + MySQL)
-- [Visual Studio 2022](https://visualstudio.microsoft.com/fr/) avec la charge de travail **.NET Desktop**
-- Package NuGet : `MySql.Data` (installable via NuGet dans Visual Studio)
-
-### Étapes
-
-**1. Cloner le dépôt**
-```bash
-git clone https://github.com/wayatte/mediatek86.git
-cd mediatek86
-```
-
-**2. Importer la base de données**
-- Ouvrir **phpMyAdmin** (`http://localhost/phpmyadmin`)
-- Créer une base de données nommée `mediatek86`
-- Importer le fichier `docs/mediatek86.sql`
-
-**3. Configurer la connexion**
-
-Ouvrir `bddmanager/BddManager.cs` et vérifier les paramètres :
-```csharp
-private static string server   = "localhost";
-private static string database = "mediatek86";
-private static string uid      = "root";
-private static string password = ""; // vide par défaut sur WampServer
-```
-
-**4. Ouvrir et lancer le projet**
-- Ouvrir `MediaTek86.sln` dans Visual Studio 2022
-- Faire clic droit sur le projet > **Gérer les packages NuGet** > installer `MySql.Data`
-- Appuyer sur **F5** pour lancer
-
-**5. Se connecter**
-- Login : `admin`
-- Mot de passe : `adminpass` *(ou celui défini dans la table `responsable`)*
-
----
 
 ## Technologies utilisées
 
